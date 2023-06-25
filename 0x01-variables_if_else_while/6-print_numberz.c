@@ -3,7 +3,8 @@
  * main - Entry point
  * Return: 0 (Success)
  */
-int main() {
+int main(void)
+{
     putchar('0');
     putchar('1');
     putchar('2');
