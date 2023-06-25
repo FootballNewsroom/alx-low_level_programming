@@ -5,26 +5,23 @@
  */
 int main(void)
 {       
-        int ones = '0';
-        int tens = '0';
-        int hundreds = '0';
-        
-        for (hundreds = '0'; hundreds <= '9'; hundreds++)
+        int i, j;
+
+	for (i = 0; i < 100; j++)
 	{
-		for (tens = '0'; tens <= '9'; tens++)
+		for (j = 0; j < 100; j++)
 		{
-			for (ones = '0'; ones <= '9'; ones++)
+			if (i < j)
 			{
-				if (!((ones == tens) || (tens == hundreds) || (tens > ones) || (hundreds > tens)))
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					putchar(hundreds);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && hundreds == '7' && tens == '8'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
