@@ -1,14 +1,12 @@
 #include <stdio.h>
 /**
- * main - prints all possible combinations of these digits
+ * main - Entry point
  * Return: 0 (Success)
  */
 int main(void)
 {
 	int ones = '0';
 	int tens = '0';
-	int hundreds = '0';
-
 	
 	for (tens = '0'; tens <= '9'; tens++)
 	{
