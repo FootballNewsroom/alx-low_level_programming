@@ -9,7 +9,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, n, r = 0, 1 = 0;
+	int i, n, r = 0, l = 0;
 	char *str;
 
 	if (ac == 0 || av == NULL)
@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 		for (n = 0; av[i][n]; n++)
 			l++;
 	}
-	l += ac;
+	l += n;
 
 	str = malloc(sizeof(char) * l + 1);
 	if (str == NULL)
@@ -33,7 +33,8 @@ char *argstostr(int ac, char **av)
 		}
 		if (str[r] == '\0')
 		{
-			str[r++] = '\n';
+			str[r] = '\n';
+			r++;
 		}
 	}
 	return (str);
